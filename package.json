@@ -6,6 +6,10 @@
   "repository": "git@github.com:JNokikana/dickplugin.git",
   "author": "<herrapentti@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "cp ./env/template.env ./app.env",
+    "run": "pm2 start server.js --name dickplugin"
+  },
   "dependencies": {
     "dotenv": "^5.0.1",
     "hapi": "^17.x.x"
