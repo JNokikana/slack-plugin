@@ -12,10 +12,11 @@ class Plugin {
         }
         let command = payload.text;
         let index = command.indexOf(">");
-
+        console.log(index);
         if (index > 1) {
             sliced = command.slice(1, index);
             userId = sliced.split("|");
+            console.log(userId);
             if(sliced !== userId && userId.length === 2){
                 userId = userId[0];
                 return new SlackResponse(Generator.generateResponse(userId), true);
