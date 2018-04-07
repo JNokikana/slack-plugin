@@ -15,7 +15,7 @@ let payload = {
     user_id: "U2147483697",
     user_name: "Steve",
     command: "/weather",
-    text: "<@U012ABCDEF|ernie>",
+    text: "<@U012ABCDEF|ernie> don't wake me up at night anymore in",
     response_url: "https://hooks.slack.com/commands/1234/5678",
     trigger_id: "13345224609.738474920.8088930838d88f008e0"
 }

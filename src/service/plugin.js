@@ -7,24 +7,16 @@ class Plugin {
         let sliced;
         let userId;
         let payload = request.payload;
-        if(!payload.text){
+        if (!payload.text) {
             return Boom.badRequest();
         }
         let command = payload.text;
         let index = command.indexOf(">");
         console.log("Inc payload: ", payload);
         console.log(index);
-        if (index > 1) {
-            sliced = command.slice(1, index);
-            userId = sliced.split("|");
-            console.log(userId);
-            if(sliced !== userId && userId.length === 2){
-                userId = userId[0];
-                return new SlackResponse(Generator.generateResponse(userId), true);
-            }
-            else{
-                return new SlackResponse("Invalid command", false);
-            }
+        if (command.startsWith("<") && index > 1 && command.length === index + 1) {
+            userId = command.slice(0, index + 1);
+            return new SlackResponse(Generator.generateResponse(userId), true);
         }
         else {
             return new SlackResponse("Invalid command", false);
