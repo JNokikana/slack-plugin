@@ -1,8 +1,7 @@
 require('dotenv').config({path: "./app.env"});
 const Hapi = require('hapi');
 const Server = new Hapi.Server({
-    port: process.env.PORT,
-    host: "localhost"
+    port: process.env.PORT
 });
 
 async function initServer() {
