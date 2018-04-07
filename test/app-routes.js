@@ -31,6 +31,7 @@ describe('Routes work as they should', async () => {
             payload: Query.stringify(payload)
         }
         let response = await Server.inject(request);
+        console.log("Response: ", response.payload);
         expect(true).to.equal(true);
     });
     it("Penis route works", async () => {
@@ -43,6 +44,7 @@ describe('Routes work as they should', async () => {
             payload: Query.stringify(payload)
         }
         let response = await Server.inject(request);
+        console.log("Response: ", response.payload);
         expect(true).to.equal(true);
     });
 });
