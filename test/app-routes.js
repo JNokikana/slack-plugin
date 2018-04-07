@@ -58,6 +58,6 @@ describe('Routes work as they should', async () => {
         }
         let response = await Server.inject(request);
         console.log("Response: ", response.payload);
-        expect(true).to.equal(true);
+        expect(response.payload.text !== ("<@U012ABCDEF|ernie> don't wake me up at night anymore in")).to.equal(true);
     });
 });
