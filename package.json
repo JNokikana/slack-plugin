@@ -9,7 +9,7 @@
   "scripts": {
     "build": "cp ./env/template.env ./app.env",
     "run": "pm2 start server.js --name dickplugin",
-    "test": "lab -t 80"
+    "test": "lab -t 90"
   },
   "dependencies": {
     "code": "^5.2.0",
