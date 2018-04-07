@@ -1,0 +1,13 @@
+{
+  "name": "dickplugin",
+  "version": "0.1",
+  "description": "A slack plugin",
+  "main": "server.js",
+  "repository": "git@github.com:JNokikana/dickplugin.git",
+  "author": "<herrapentti@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "hapi": "^17.x.x"
+  }
+}
