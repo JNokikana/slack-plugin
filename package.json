@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "cp ./env/template.env ./app.env",
-    "run": "pm2 start server.js --name dickplugin",
+    "start": "pm2 start server.js --name dickplugin",
     "test": "lab -t 90"
   },
   "dependencies": {
