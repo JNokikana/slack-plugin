@@ -4,14 +4,13 @@ const Server = new Hapi.Server({
 });
 
 async function initServer() {
-    try{
-        await Server.register(require('./src/routes/app-routes'));
+    await Server.register(require('./src/routes/app-routes.js'));
+    if (!module.parent) {
         await Server.start();
         console.log("Server started succesfully.");
-    }catch(error){
-        console.log(error);
-        console.log("Error starting server.");
     }
 }
 
 initServer();
+
+module.exports = Server;
