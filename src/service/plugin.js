@@ -1,13 +1,13 @@
 const SlackResponse = require('../util/SlackResponse.js');
+const Generator = require('../util/ResponseGenerator.js');
 
 class Plugin{
     getPenis(request, reply){
         let payload = request.payload;
         let command = payload.text;
         console.log("Inc payload: ", payload);
-        let user = command.slice(1, command.indexOf(">"));
-        console.log(user);
-        return new SlackResponse("Perse", true);
+        let userId = command.slice(1, command.indexOf(">")).split("|")[0];
+        return new SlackResponse(Generator.generateResponse(userId), true);
     }
     getCredits(request, reply){
         let payload = request.payload;

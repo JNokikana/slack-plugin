@@ -15,7 +15,7 @@ let payload = {
     user_id: "U2147483697",
     user_name: "Steve",
     command: "/weather",
-    text: 94070,
+    text: "<@U012ABCDEF|ernie> don't wake me up at night anymore in",
     response_url: "https://hooks.slack.com/commands/1234/5678",
     trigger_id: "13345224609.738474920.8088930838d88f008e0"
 }
@@ -35,6 +35,19 @@ describe('Routes work as they should', async () => {
         expect(true).to.equal(true);
     });
     it("Penis route works", async () => {
+        let request = {
+            method: "POST",
+            url: "/api/penis",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            payload: Query.stringify(payload)
+        }
+        let response = await Server.inject(request);
+        console.log("Response: ", response.payload);
+        expect(true).to.equal(true);
+    });
+    it("Username is parsed correctly", async () => {
         let request = {
             method: "POST",
             url: "/api/penis",
