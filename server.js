@@ -7,9 +7,9 @@ const Server = new Hapi.Server({
 
 async function initServer() {
     await Server.register(require('./src/routes/app-routes.js'));
-    console.log(process.env.PORT);
     if (!module.parent) {
         await Server.start();
+        console.log("Running on port: ", process.env.PORT);
         console.log("Server started succesfully.");
     }
 }
