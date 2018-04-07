@@ -12,6 +12,7 @@ class Plugin {
         }
         let command = payload.text;
         let index = command.indexOf(">");
+        console.log("Inc payload: ", payload);
         console.log(index);
         if (index > 1) {
             sliced = command.slice(1, index);
