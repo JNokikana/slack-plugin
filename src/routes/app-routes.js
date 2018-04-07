@@ -7,10 +7,10 @@ const routes = {
     register: async function(server, options) {
         server.routes([
             {
-                method: "GET", path: "/api/penis", handler: Plugin.getPenis
+                method: "POST", path: "/api/penis", handler: Plugin.getPenis
             },
             {
-                method: "GET", path: "/api/credits", handler: Plugin.getCredits
+                method: "POST", path: "/api/credits", handler: Plugin.getCredits
             }
         ])
     }
