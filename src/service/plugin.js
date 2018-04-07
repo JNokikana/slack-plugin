@@ -1,11 +1,15 @@
 const SlackResponse = require('../util/SlackResponse.js');
 const Generator = require('../util/ResponseGenerator.js');
+const Boom = require('boom');
 
 class Plugin {
     getPenis(request, reply) {
         let sliced;
         let userId;
         let payload = request.payload;
+        if(!payload.text){
+            return Boom.badRequest();
+        }
         let command = payload.text;
         let index = command.indexOf(">");
 

@@ -12,6 +12,7 @@
     "test": "lab -t 90"
   },
   "dependencies": {
+    "boom": "^7.2.0",
     "code": "^5.2.0",
     "dotenv": "^5.0.1",
     "hapi": "^17.x.x",
