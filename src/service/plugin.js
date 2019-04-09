@@ -3,7 +3,7 @@ const Generator = require('../util/ResponseGenerator.js');
 const Boom = require('boom');
 
 class Plugin {
-    getPenis(request, reply) {
+    getTestMessage(request, reply) {
         let sliced;
         let userId;
         let payload = request.payload;

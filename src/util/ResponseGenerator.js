@@ -1,6 +1,6 @@
 class ResponseGenerator{
     generateResponse(username){
-        return username + " likes penis very much.";
+        return username + " is here lolz.";
     }
 }
 

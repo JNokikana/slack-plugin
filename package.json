@@ -1,14 +1,14 @@
 {
-  "name": "dickplugin",
-  "version": "0.1",
+  "name": "slackplugin",
+  "version": "0.0.1",
   "description": "A slack plugin",
   "main": "server.js",
-  "repository": "git@github.com:JNokikana/dickplugin.git",
-  "author": "<herrapentti@gmail.com>",
+  "repository": "git@github.com:JNokikana/slack-plugin.git",
+  "author": "<joonas@joonas.ninja>",
   "license": "MIT",
   "scripts": {
     "build": "cp ./env/template.env ./app.env",
-    "start": "pm2 start server.js --name dickplugin",
+    "start": "pm2 start server.js --name slackplugin",
     "test": "lab -t 85"
   },
   "dependencies": {

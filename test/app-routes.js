@@ -37,7 +37,7 @@ describe('Routes work as they should', async () => {
     it("Penis route works", async () => {
         let request = {
             method: "POST",
-            url: "/api/penis",
+            url: "/api/test",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
@@ -50,7 +50,7 @@ describe('Routes work as they should', async () => {
     it("Username is parsed correctly", async () => {
         let request = {
             method: "POST",
-            url: "/api/penis",
+            url: "/api/test",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },

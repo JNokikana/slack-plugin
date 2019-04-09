@@ -7,7 +7,7 @@ module.exports = {
     register: async function(server, options) {
         server.route([
             {
-                method: "POST", path: "/api/penis", handler: Plugin.getPenis
+                method: "POST", path: "/api/test", handler: Plugin.getTestMessage
             },
             {
                 method: "POST", path: "/api/credits", handler: Plugin.getCredits
