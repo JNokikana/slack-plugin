@@ -34,7 +34,7 @@ describe('Routes work as they should', async () => {
         console.log("Response: ", response.payload);
         expect(true).to.equal(true);
     });
-    it("Penis route works", async () => {
+    it("Test route works", async () => {
         let request = {
             method: "POST",
             url: "/api/test",
